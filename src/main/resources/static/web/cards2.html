@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Orbitron|Roboto+Condensed:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styleCard.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="app">
+
+        <div class="d-flex flex-column w-100">
+
+            <div class="d-flex justify-content-around align-items-start p-4">
+                <h3>Credit Cards: </h3>
+                <div class="pb-4" v-for="card in creditCards">
+                    <button class="btn btn-danger" @click="disableCard(card.id)">Delete Card</button>
+                </div>
+
+                <div class="card" v-for="card in creditCards">
+
+                    <div class="card__container">
+
+                        <div class="card__front">
+
+                            <div class="card__front--bg">
+                                <div class="front--bg--s1"></div>
+                            </div>
+
+                            <div class="card__brand">
+
+                                <span class="card__brand--logo font-logo">
+                                    <span class="logo-letter logo-d">d</span>
+                                    <span class="logo-letter logo-mid">&</span>
+                                    <span class="logo-letter logo-p">p</span>
+                                </span>
+
+                                <span class="card__brand--name font-normal">
+                                    {{card.type}}
+                                </span>
+
+                            </div>
+
+                            <div class="card__chip">
+                                <div class="card__chip--shape"></div>
+                                <div class="card__chip--shape"></div>
+                                <div class="card__chip--shape"></div>
+                            </div>
+
+                            <div class="card__extra">
+                                <div class="card__extra--contactless">
+                                    <i class="fas fa-wifi"></i>
+                                </div>
+                            </div>
+
+                            <div class="card__number font-number">
+                                {{numTarjeta(card.number)}}
+                            </div>
+
+                            <div class="card__payment">
+                                <i class="fab fa-cc-visa"></i>
+                            </div>
+
+                            <div class="card__user">
+                                <span class="card__user--name  font-number">{{card.cardholder}}</span>
+                                <div class="card__user--valid">
+                                    <div class="card__user--valid-txt font-normal">VALİD THRU</div>
+                                    <div class="card__user--valid-date  font-number">{{thruDateTarjeta(card.thruDate)}}</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="card__back">
+                            <div class="card__plast">
+                            </div>
+                            <div class="card__contact">
+                                <p class="card__contact--txt">Customer Service: 0855 0055 0055</p>
+                                <p class="card__contact--txt">www.samplecard.com.xx</p>
+                            </div>
+                            <div class="card__strip"></div>
+                            <div class="card__company">
+                                <div class="card__company--address">7741 Hayvenhurst Ave, Van Nuys, CA 91406 Los Angeles
+                                    / Californiya - USA</div>
+                                <div class="card__company--msg">A credit card is different from a charge card, which
+                                    requires the balance to be repaid in full each month. </div>
+                            </div>
+                            <div class="card__cvc">
+                                <div class="card__cvc--strip">
+                                    <div class="strip-shape"></div>
+                                    <div class="strip-shape"></div>
+                                    <div class="strip-shape"></div>
+                                    <div class="strip-shape"></div>
+                                    <div class="strip-shape"></div>
+                                </div>
+
+                                <span class="card__cvc--num"><span class="card__cvc--txt">535</span> CVC </span>
+
+                            </div>
+                            <p class="card__cvc--warning"> NOT VALİD WİTHOUT AUTHORİZED SİGNATURE</p>
+                            <div class="card__stamp"></div>
+                            <div class="card--hr"></div>
+                            <div class="card__back--bottom">
+                                <p class="company-dec">
+                                    d&p sample company
+                                </p>
+                                <p class="card--business">
+                                    SampleCard
+                                </p>
+                            </div>
+                            <div class="card__back--shape"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="d-flex align-items-end p-4">
+                <h3>Debit Cards: </h3>
+                <div class="pb-4" v-for="card in debitCards">
+                    <button class="btn btn-danger" @click="disableCard(card.id)">Delete Card</button>
+                </div>
+
+                <div class="card" v-for="card in debitCards">
+
+                    <div class="card__container">
+
+                        <div class="card__front">
+
+                            <div class="card__front--bg">
+                                <div class="front--bg--s1"></div>
+                            </div>
+
+                            <div class="card__brand">
+
+                                <span class="card__brand--logo font-logo">
+                                    <span class="logo-letter logo-d">d</span>
+                                    <span class="logo-letter logo-mid">&</span>
+                                    <span class="logo-letter logo-p">p</span>
+                                </span>
+
+                                <span class="card__brand--name font-normal">
+                                    {{card.type}}
+                                </span>
+
+                            </div>
+
+                            <div class="card__chip">
+                                <div class="card__chip--shape"></div>
+                                <div class="card__chip--shape"></div>
+                                <div class="card__chip--shape"></div>
+                            </div>
+
+                            <div class="card__extra">
+                                <div class="card__extra--contactless">
+                                    <i class="fas fa-wifi"></i>
+                                </div>
+                            </div>
+
+                            <div class="card__number font-number">
+                                {{numTarjeta(card.number)}}
+                            </div>
+
+                            <div class="card__payment">
+                                <i class="fab fa-cc-visa"></i>
+                            </div>
+
+                            <div class="card__user">
+                                <span class="card__user--name  font-number">{{card.cardholder}}</span>
+                                <div class="card__user--valid">
+                                    <div class="card__user--valid-txt font-normal">VALİD THRU</div>
+                                    <div class="card__user--valid-date  font-number">{{thruDateTarjeta(card.thruDate)}}</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="card__back">
+                            <div class="card__plast">
+                            </div>
+                            <div class="card__contact">
+                                <p class="card__contact--txt">Customer Service: 0855 0055 0055</p>
+                                <p class="card__contact--txt">www.samplecard.com.xx</p>
+                            </div>
+                            <div class="card__strip"></div>
+                            <div class="card__company">
+                                <div class="card__company--address">7741 Hayvenhurst Ave, Van Nuys, CA 91406 Los Angeles
+                                    / Californiya - USA</div>
+                                <div class="card__company--msg">A credit card is different from a charge card, which
+                                    requires the balance to be repaid in full each month. </div>
+                            </div>
+                            <div class="card__cvc">
+                                <div class="card__cvc--strip">
+                                    <div class="strip-shape"></div>
+                                    <div class="strip-shape"></div>
+                                    <div class="strip-shape"></div>
+                                    <div class="strip-shape"></div>
+                                    <div class="strip-shape"></div>
+                                </div>
+
+                                <span class="card__cvc--num"><span class="card__cvc--txt">535</span> CVC </span>
+
+                            </div>
+                            <p class="card__cvc--warning"> NOT VALİD WİTHOUT AUTHORİZED SİGNATURE</p>
+                            <div class="card__stamp"></div>
+                            <div class="card--hr"></div>
+                            <div class="card__back--bottom">
+                                <p class="company-dec">
+                                    d&p sample company
+                                </p>
+                                <p class="card--business">
+                                    SampleCard
+                                </p>
+                            </div>
+                            <div class="card__back--shape"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src=" https://unpkg.com/vue@3"></script>
+    <script src="./cards.js"></script>
+
+</body>
+
+</html>

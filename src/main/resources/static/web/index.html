@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <script type='text/javascript' src=''></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/styleIndex.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <h1>Login</h1>
+
+    <div id="app" class="w-100 d-flex justify-content-center">
+        <div class="d-flex justify-content-around">
+
+
+            <a href="https://front.codes/" class="logo" target="_blank">
+                <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
+            </a>
+
+            <div class="section">
+                <div class="container">
+                    <div class="row full-height justify-content-center">
+                        <div class="col-12 text-center align-self-center py-5">
+                            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                                <div class="palabras">
+                                    <h6 class="mb-0 pb-3"><span>Sign In </span><span>Sign Up</span></h6>
+                                </div>
+                                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+                                <label for="reg-log"></label>
+                                <div class="card-3d-wrap mx-auto">
+                                    <div class="card-3d-wrapper">
+                                        <div class="card-front">
+                                            <div class="center-wrap">
+                                                <div class="section text-center">
+                                                    <h4 class="mb-4 pb-3">Sign In</h4>
+                                                    <div class="form-group">
+                                                        <input type="email" name="logemail" class="form-style" v-model="clientMail"
+                                                            placeholder="Your Email" id="logemail" autocomplete="off">
+                                                        <i class="input-icon uil uil-at"></i>
+                                                    </div>
+                                                    <div class="form-group mt-2">
+                                                        <input type="password" name="logpass" class="form-style"  v-model="clientPassword"
+                                                            placeholder="Your Password" id="logpass" autocomplete="off">
+                                                        <i class="input-icon uil uil-lock-alt"></i>
+                                                    </div>
+                                                    <button @click="signInClient" class="btn mt-4">Sign In</button>
+                                                    <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot
+                                                            your password?</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-back">
+                                            <div class="center-wrap">
+                                                <div class="section text-center">
+                                                    <h4 class="mb-4 pb-3">Sign Up</h4>
+                                                    <div class="form-group mb-2">
+                                                        <input type="text" name="logname" class="form-style" v-model="clientFirstName"
+                                                            placeholder="Your First Name" id="logname"
+                                                            autocomplete="off">
+                                                        <i class="input-icon uil uil-user"></i>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <input type="text" name="logname" class="form-style" v-model="clientLastName"
+                                                            placeholder="Your Last Name"
+                                                            autocomplete="off">
+                                                        <i class="input-icon uil uil-user"></i>
+                                                    </div>
+                                                    <div class="form-group mt-2">
+                                                        <input type="email" name="logemail" class="form-style" v-model="newClientMail"
+                                                            placeholder="Your Email" id="logemail" autocomplete="off">
+                                                        <i class="input-icon uil uil-at"></i>
+                                                    </div>
+                                                    <div class="form-group mt-2">
+                                                        <input type="password" name="logpass" class="form-style" v-model="newClientPassword"
+                                                            placeholder="Your Password" id="logpass" autocomplete="off">
+                                                        <i class="input-icon uil uil-lock-alt"></i>
+                                                    </div>
+                                                    <button @click="signUpClient" class="btn mt-4">Sign Up</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <div class="container right-panel-active"> -->
+        <!-- Sign Up -->
+        <!-- <div class="container__form container--signup">
+                <form action="#" class="form" id="form1">
+                    <h2 class="form__title">Sign Up</h2>
+                    <input type="text" placeholder="User" class="input" />
+                    <input type="email" placeholder="Email" class="input" />
+                    <input type="password" placeholder="Password" class="input" />
+                    <button class="btn">Sign Up</button>
+                </form>
+            </div> -->
+
+
+        <!-- <form @submit.prevent="signInClient" class="w-25">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" v-model="clientMail"
+                    aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" v-model="clientPassword" id="exampleInputPassword1">
+            </div> -->
+            <!-- <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <!-- <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+
+        <form @submit.prevent="signUpClient" class="w-25">
+            <div class="mb-3">
+                <label for="exampleInputEmail2" class="form-label">Firts Name:</label>
+                <input type="text" class="form-control" v-model="clientFirstName">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail3" class="form-label">Last Name:</label>
+                <input type="text" class="form-control" v-model="clientLastName">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail4" class="form-label">Email address</label>
+                <input type="email" class="form-control" v-model="newClientMail" aria-describedby="emailHelp">
+                <div class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Password</label>
+                <input type="password" class="form-control" v-model="newClientPassword">
+            </div> -->
+
+            <!-- <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <!-- <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form> -->
+
+
+        <!-- Sign In -->
+        <!-- <div class="container__form container--signin">
+                <form action="#" class="form" id="form2">
+                    <h2 class="form__title">Sign In</h2>
+                    <input type="email" placeholder="Email" class="input" />
+                    <input type="password" placeholder="Password" class="input" />
+                    <a href="#" class="link">Forgot your password?</a>
+                    <button class="btn">Sign In</button>
+                </form>
+            </div> -->
+
+        <!-- Overlay -->
+        <!-- <div class="container__overlay">
+                <div class="overlay">
+                    <div class="overlay__panel overlay--left">
+                        <button class="btn" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay__panel overlay--right">
+                        <button class="btn" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src=" https://unpkg.com/vue@3"></script>
+    <script src="./index.js"></script>
+
+
+
+</body>
+
+</html>

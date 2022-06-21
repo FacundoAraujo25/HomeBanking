@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <script type='text/javascript' src=''></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Document</title>
+</head>
+
+<body id="body-pd">
+
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_img"> <img src="../assets/melba.png" alt=""> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <!--class='bx bx-layer nav_logo-icon'-->
+            <div> <a href="#" class="nav_logo"> <i><img src="../assets/banco_logo.png" class="logo_nav" alt=""></i>
+                    <span class="nav_logo-name"></span> </a>
+                <div class="nav_list"> <a href="#" class="nav_link"> <i class='bx bx-user bx-md'
+                            style='color:#4e4d8f'></i> <span class="nav_name">Accounts Stats</span> </a>
+                    <a href="./cards.html" class="nav_link"><i class='bx bx-credit-card bx-md'
+                            style='color:#4e4d8f'></i><span class="nav_name">Credit / Debit Cards</span> </a>
+                    <a href="./loan-application.html" class="nav_link"><i class='bx bx-money-withdraw bx-md'
+                            style='color:#4e4d8f'></i> <span class="nav_name">Loans</span> </a>
+                </div>
+                <a href="./tranfers.html" class="nav_link"> <i class='bx bx-transfer-alt bx-md'
+                        style='color:#4e4d8f'></i> <span class="nav_name">Transactions</span> </a>
+            </div>
+            <!-- <button @click="signOutClient" class="nav_link" >
+                <span class="nav_name">SignOut</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfdJREFUSEuNVUtWwkAQrEb3cAP1BHIB8lwJ3gIvQhIvArfQZGF44XEPuIFrfdC+HmaS+RJYQJjMTHdVV3UTug8BYMD9gbtgv9TP6jyBwHLa+xDI3ha81ws37wniOwHSWShkkexsxPHk5E6LogCmzmj3Wbww8RqEx34/a2IuKxbKA53pffZWbNW6epHiXR9t69UBjIfucgFE6usCzkpT7zlk8/LJBB5gmrCrVswMZIvSSSgQCIC2yhWf2bxUYcPYkYqqQzqAzbWN3vDUfq2UFLsAwwohtJUckqw+KC7HPuxlrwlgihykIlCLTbYolpL5rso1RZEAXoaCVpZmi1JyCSlqvovJ6I8bAqYGpi+TpGSHarCvi+mJuQEwUZRYWRgnuP71FEhA+2UX2RhNXlRCB69jhrlWJ1stwo0bwPhAoNU6QFzXlh0Bkawh1wlwnSLCvs6Foi3AY6n/TGs5pnfPvZ2dA5n6BWyaYnL3y1sCnocCxIo/qCKTrZLpvFgKFykf9LXpn2Rvj95rdqnu6Ns/aG8mK7vIKR+EAyditEBWLgLl5DCAe8r+d3MvslWURBAxQlvlPwDGMY84a6aNEx2z11LNjrCbRm5RA+eeNzhbMyExCEB8xGm0zG4aOEN9ITpK3fGSGPrp5nC1vQeT0aHolksDSG4LidD7D5tXIy5Yv3njAAAAAElFTkSuQmCC" /></button> -->
+
+        </nav>
+    </div>
+
+    <div id="app" class="d-flex flex-column justify-content-around">
+
+        <div class="blog-slider">
+            <div class="blog-slider__wrp swiper-wrapper">
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp"
+                            alt="">
+                    </div>
+                    <div class="blog-slider__content">
+                        <span class="blog-slider__code">26 December 2019</span>
+                        <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Recusandae voluptate repellendus magni illo ea animi? </div>
+                        <a href="#" class="blog-slider__button">READ MORE</a>
+                    </div>
+                </div>
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp"
+                            alt="">
+                    </div>
+                    <div class="blog-slider__content">
+                        <span class="blog-slider__code">26 December 2019</span>
+                        <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+                        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Recusandae voluptate repellendus magni illo ea animi?</div>
+                        <a href="#" class="blog-slider__button">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+                            alt="">
+                    </div>
+                    <div class="blog-slider__content">
+                        <span class="blog-slider__code">26 December 2019</span>
+                        <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Recusandae voluptate repellendus magni illo ea animi?</div>
+                        <a href="#" class="blog-slider__button">READ MORE</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="blog-slider__pagination"></div>
+        </div>
+
+
+        <div class="d-flex justify-content-center">
+
+            <form action="" class="d-flex flex-column align-items-center justify-content-around loanForm"
+                @submit.prevent="createLoan">
+
+                <h6>Choose the loan's type</h6>
+                <select name="loanType" id="" v-model="loanType" @change="funcionPrueba">
+                    <option :value=loan.id v-for="loan in loans">{{loan.name}}</option>
+                </select>
+
+                <h6>Select how many payments</h6>
+                <select name="loanPayments" v-model="loanPayments" id="">
+                    <option :value=payment v-for="payment in payments">{{payment}}</option>
+                </select>
+
+                <h6>Loan's Amount:</h6>
+                <input type="number" name="loanAmount" v-model="loanAmount" id="">
+
+                <h6>Account to apply for the loan:</h6>
+                <select name="loanAccount" id="" v-model="loanAccount">
+                    <option :value=account.number v-for="account in accounts">{{account.number}}</option>
+                </select>
+
+
+                <p>Loan's Amount with taxes included: {{loanAmount*1.2}}</p>
+
+                <p>Each payment amount: {{(loanAmount*1.2)/loanPayments}}</p>
+
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Apply for this loan</button>
+
+                <div class="modal fade w-100" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Everything is OK but...</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h6>Are you sure you want to apply for this loan?</h6>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel
+                                    Request</button>
+                                <button type="submit" class="btn btn-primary">Yes!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src=" https://unpkg.com/vue@3"></script>
+    <script src="./loan-application.js"></script>
+
+
+</body>
+
+</html>
