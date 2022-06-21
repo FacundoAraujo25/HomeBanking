@@ -58,12 +58,12 @@ Vue.createApp({
     },
 
     created() {
-        axios.get('http://localhost:8585/api/clients')
+        axios.get('/api/clients')
             .then(datos => {
                 this.clientes = datos.data
             })
 
-        axios.get('http://localhost:8585/api/clients/current')
+        axios.get('/api/clients/current')
             .then(datos =>{
                 this.cliente1 = datos.data
                 console.log(this.cliente1)
@@ -84,14 +84,14 @@ Vue.createApp({
         
         disableAccount(id){
 
-            axios.patch('http://localhost:8585/api/clients/current/accounts',
+            axios.patch('/api/clients/current/accounts',
             `id=${id}`,
             { headers: { "content-type": "application/x-www-form-urlencoded" } }
             )
                 .then(function (response) {
                     console.log("Account deleted!!!");
 
-                    window.location.href = "http://localhost:8585/web/accounts.html";
+                    window.location.href = "/web/accounts.html";
                 })
                         .catch(function (error) {
                         console.log(error);
@@ -143,11 +143,11 @@ Vue.createApp({
                     console.log("Que ande o me mato")
                     axios.post('/api/logout')
                         .then(response => console.log("Que ande o me mato"))
-                    window.location.href = "http://localhost:8585/web/index.html"
+                    window.location.href = "/web/index.html"
                 },
 
                 createAccount(){
-                    axios.post("http://localhost:8585/api/clients/current/accounts")
+                    axios.post("/api/clients/current/accounts")
                     .then(console.log("Account created"))
                         .then(function (loadData) {
                             location.reload(loadData);

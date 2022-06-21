@@ -20,12 +20,12 @@ Vue.createApp({
     },
 
     created() {
-        axios.get('http://localhost:8585/api/clients')
+        axios.get('/api/clients')
             .then(datos => {
                 this.clientes = datos.data
             })
 
-        axios.get('http://localhost:8585/api/clients/1')
+        axios.get('/api/clients/1')
             .then(datos =>{
                 this.cliente1 = datos.data
                 this.cards = this.cliente1.cards
@@ -41,14 +41,14 @@ Vue.createApp({
     
 
         disableCard(id){
-            axios.patch('http://localhost:8585/api/clients/current/cards',
+            axios.patch('/api/clients/current/cards',
             `id=${id}`,
             { headers: { "content-type": "application/x-www-form-urlencoded" } }
             )
                 .then(function (response) {
                     console.log("Card deleted!!!");
 
-                    window.location.href = "http://localhost:8585/web/cards.html";
+                    window.location.href = "/web/cards.html";
                 })
                         .catch(function (error) {
                         console.log(error);

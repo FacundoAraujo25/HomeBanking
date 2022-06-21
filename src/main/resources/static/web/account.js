@@ -54,7 +54,7 @@ Vue.createApp({
         const urlParams = new URLSearchParams(window.location.search);
         const idAccount = urlParams.get('id');
         
-        axios.get('http://localhost:8585/api/clients/current/accounts/' + idAccount)
+        axios.get('/api/clients/current/accounts/' + idAccount)
             .then(datos =>{
                 console.log(datos)
                 this.account = datos.data
@@ -64,7 +64,7 @@ Vue.createApp({
             })
 
 
-        axios.get('http://localhost:8585/api/clients/current/accounts/')
+        axios.get('/api/clients/current/accounts/')
             .then(datos =>{
                 this.accounts = datos.data
             })
@@ -73,7 +73,7 @@ Vue.createApp({
 
     methods: {
         crearCliente(){
-            axios.post('http://localhost:8585/rest/clients',{
+            axios.post('/rest/clients',{
                 nombre:this.nombreCliente,
                 apellido:this.apellidoCliente,
                 mail:this.mailCliente,
