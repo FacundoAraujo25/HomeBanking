@@ -68,8 +68,8 @@
                             <div class="d-flex flex-column"><span>Balance amount</span>
                                 <p>&dollar; <span class="text-white">{{account.balance}}</span></p>
                             </div>
-                            <a class="btn btn-secondary" v-bind:href="`./account.html?id=${account.id}`">See All
-                                Transactions</a>
+                            <button class="btn btn-secondary"><a  v-bind:href="`./account.html?id=${account.id}`">See All
+                                Transactions</a></button>
                             <!-- <i class="fa fa-arrow-right text-white"></i> -->
                             <button class="btn btn-danger" @click="disableAccount(account.id)">Delete Account</button>
                         </div>
@@ -83,27 +83,10 @@
 
                     <!-- Begin Bank Accounts card -->
                     <div class="my-card card w-100 p-auto my-2 tarjetas">
-                        <div class="my-card card tarjetas">
+                        <div class="my-card cardTarjetas">
                             <div class="my-card__body card-body">
                                 <div class="my-text-overline">Bank accounts and cards</div>
                                 <a class="my-card__header-link" href="./cards.html">See all Cards →</a>
-                                <!-- <table class="table table-hover table-secondary w-100">
-                                    <thead>
-                                        <th>Type of Card</th>
-                                        <th>Card Color</th>
-                                        <th>Number</th>
-                                        <th>Thru Date</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr v-for="card in cards">
-                                            <td>{{card.cardType}}</td>
-                                            <td>{{card.cardColor}}</td>
-                                            <td>"x-"{{ultimosNumTarjeta(card.number)}}</td>
-                                            <td>{{numTarjeta(card.number)}}</td>
-                                            <td>{{thruDateTarjeta(card.thruDate)}}</td>
-                                        </tr>
-                                    </tbody>
-                                </table> -->
                                 <h6>Credit Cards</h6>
                                 <div class="credit-card visa selectable" :class="{'gold_card' : card.cardColor == 'GOLD', 'silver_card' : card.cardColor == 'SILVER', 'platinum_card' : card.cardColor == 'TITANIUM'}" v-for="card in creditCards">
                                     <div class="credit-card-last4">
