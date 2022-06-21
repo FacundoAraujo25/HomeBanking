@@ -83,7 +83,7 @@
 
                     <!-- Begin Bank Accounts card -->
                     <div class="my-card card w-100 p-auto my-2 tarjetas">
-                        <div class="my-card card tarjetas">
+                        <div class="my-card cardTarjetas">
                             <div class="my-card__body card-body">
                                 <div class="my-text-overline">Bank accounts and cards</div>
                                 <a class="my-card__header-link" href="./cards.html">See all Cards →</a>
@@ -144,7 +144,7 @@
                     </div>
                     <ul class="my-list list-group list-group-flush ">
                         <li class="my-list-item list-group-item" v-for="loan in loans">
-
+                            <div v-if="loans.length == 0"><p>hola</p></div>
                             <div class="my-list-item__date">
                                 <span class="my-list-item__date-day">{{loan.name}}</span>
                                 <span class="my-list-item__date-month">Type of Loan:</span>
