@@ -69,7 +69,15 @@ h2 {
     height: 3vw;
 }
 
+
 /* ------------ Cards Container ------------ */
+
+.cardCuentas{
+    width: 20vw !important;
+    border: none;
+    border-radius: 10px;
+    border-radius: 50px;
+}
 
 /* MAIN CREDIT CARD CONTAINER */
 
