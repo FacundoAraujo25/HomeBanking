@@ -127,7 +127,7 @@
                     </div>
                     <ul class="my-list list-group list-group-flush ">
                         <li class="my-list-item list-group-item" v-for="loan in loans">
-
+                            <div v-if="loans.length == 0"><p>hola</p></div>
                             <div class="my-list-item__date">
                                 <span class="my-list-item__date-day">{{loan.name}}</span>
                                 <span class="my-list-item__date-month">Type of Loan:</span>

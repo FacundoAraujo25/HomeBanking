@@ -73,7 +73,7 @@ Vue.createApp({
                 this.accounts = this.accounts.filter(account => account.disable == false);
                 this.cuenta1 = this.accounts[0];
                 this.loans = this.cliente1.clientLoans
-                console.log(this.accounts);
+                console.log(this.loans);
             })
 
         
