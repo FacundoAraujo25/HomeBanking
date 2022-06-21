@@ -49,7 +49,7 @@ Vue.createApp({
 
                 console.log('signed in!!!')
                 
-                window.location.href = "/web/accounts.html";
+                window.location.href = "https://jengibrehomebanking.herokuapp.com/web/accounts.html";
 
             })
             .catch(function(error){
@@ -71,7 +71,7 @@ Vue.createApp({
                     {headers:{'content-type':'application/x-www-form-urlencoded'}
                     })
                 .then(function(response){
-                    window.location.href = "/web/accounts.html";
+                    window.location.href = "https://jengibrehomebanking.herokuapp.com/web/accounts.html";
                 })
 
             })
@@ -97,7 +97,7 @@ Vue.createApp({
 
                 console.log('signed out!!!')
                 
-                window.location.href = "/web/index.html";
+                window.location.href = "https://jengibrehomebanking.herokuapp.com/web/index.html";
 
                 })
         },
