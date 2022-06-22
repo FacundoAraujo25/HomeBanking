@@ -171,6 +171,10 @@ src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes
     width: 6rem;
 }
 
+.header_img{
+    width: 4rem;
+}
+
 
 .botones-tabla {
     border-radius: 4rem;
