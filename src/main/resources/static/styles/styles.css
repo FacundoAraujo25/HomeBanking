@@ -292,12 +292,12 @@ src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes
     color: #8a82dd;
 }
 
-.gold_card {
+.credit-card.gold_card {
     background: linear-gradient(to right,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)!important;
     color: #303030 !important;
 }
 
-.silver_card {
+.credit-card.silver_card {
     background: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%)!important;
     color: #303030 !important;
 }
