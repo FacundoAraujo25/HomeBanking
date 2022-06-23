@@ -2,10 +2,8 @@ package com.mindhub.HomeBanking.controllers;
 
 
 import com.mindhub.HomeBanking.dtos.AccountDTO;
-import com.mindhub.HomeBanking.dtos.ClientDTO;
 import com.mindhub.HomeBanking.models.Account;
 import com.mindhub.HomeBanking.models.AccountType;
-import com.mindhub.HomeBanking.models.Card;
 import com.mindhub.HomeBanking.models.Client;
 import com.mindhub.HomeBanking.repositories.AccountRepository;
 import com.mindhub.HomeBanking.repositories.ClientRepository;
@@ -79,10 +77,10 @@ public class AccountController {
     }
 
     @RequestMapping("/clients/current/accounts")
-    public List<AccountDTO> getCurrentAccounts(Authentication authentication) {
+    public List<Account> getCurrentAccounts(Authentication authentication) {
         Client client =  clientService.findByMail(authentication.getName());
 
-        return client.getAccounts().stream().map(AccountDTO::new).collect(toList());
+        return client.getAccounts().stream().filter(account -> account.isDisable()==false).collect(toList());
 
     }
 

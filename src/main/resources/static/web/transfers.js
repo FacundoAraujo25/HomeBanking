@@ -16,11 +16,11 @@ Vue.createApp({
     },
 
     created() {
-    axios.get("/api/clients").then((datos) => {
+    axios.get("http://localhost:8585/api/clients").then((datos) => {
     this.clientes = datos.data;
     });
 
-    axios.get("/api/clients/current")
+    axios.get("http://localhost:8585/api/clients/current")
     .then((datos) => {
       this.cliente1 = datos.data;
       console.log(this.cliente1);
@@ -32,14 +32,14 @@ Vue.createApp({
     createTransfer() {
       axios
         .post(
-          "/api/transactions",
+          "http://localhost:8585/api/transactions",
           `sourceAccountNumber=${this.sourceAccount}&destinationAccountNumber=${this.destinationAccount}&amount=${this.amount}&description=${this.description}`,
           { headers: { "content-type": "application/x-www-form-urlencoded" } }
         )
         .then(function (response) {
           console.log("Transaction done!!!");
 
-          window.location.href = "/web/accounts.html";
+          window.location.href = "http://localhost:8585/web/accounts.html";
         })
         .catch(function (error) {
           console.log(error);

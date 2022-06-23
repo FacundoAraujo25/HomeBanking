@@ -37,18 +37,18 @@ Vue.createApp({
   },
 
   created() {
-    axios.get("/api/clients")
+    axios.get("http://localhost:8585/api/clients")
         .then((datos) => {
       this.clientes = datos.data;
     });
 
-    axios.get("/api/clients/current")
+    axios.get("http://localhost:8585/api/clients/current")
         .then((datos) => {
       this.cliente1 = datos.data;
       this.accounts = this.cliente1.accounts;
         });
 
-    axios.get("/api/loans")
+    axios.get("http://localhost:8585/api/loans")
           .then((datos)=>{
             this.loans = datos.data;
             console.log(this.loans);
@@ -74,7 +74,7 @@ Vue.createApp({
 
   methods: {
     createLoan() {
-      axios.post("/api/loans",
+      axios.post("http://localhost:8585/api/loans",
           {
             idLoan:this.loanType,
             amount:this.loanAmount,
@@ -84,7 +84,7 @@ Vue.createApp({
         )
         .then(function (response) {
           console.log("Loan aproved!!!");
-          window.location.href = "/web/accounts.html";
+          window.location.href = "http://localhost:8585/web/accounts.html";
         })
         .catch(function (error) {
           console.log(error);

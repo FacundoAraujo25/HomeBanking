@@ -14,100 +14,30 @@
 </head>
 
 <body>
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_img"> <img src="../assets/melba.png" alt=""> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <!--class='bx bx-layer nav_logo-icon'-->
+            <div> <a href="#" class="nav_logo"> <i><img src="../assets/banco_logo.png" class="logo_nav" alt=""></i>
+                    <span class="nav_logo-name"></span> </a>
+                <div class="nav_list"> <a href="#" class="nav_link"> <i class='bx bx-user bx-md'
+                            style='color:#4e4d8f'></i> <span class="nav_name">Accounts Stats</span> </a>
+                    <a href="./cards.html" class="nav_link"><i class='bx bx-credit-card bx-md'
+                            style='color:#4e4d8f'></i><span class="nav_name">Credit / Debit Cards</span> </a>
+                    <a href="./loan-application.html" class="nav_link"><i class='bx bx-money-withdraw bx-md'
+                            style='color:#4e4d8f'></i> <span class="nav_name">Loans</span> </a>
+                </div>
+                <a href="./tranfers.html" class="nav_link"> <i class='bx bx-transfer-alt bx-md'
+                        style='color:#4e4d8f'></i> <span class="nav_name">Transactions</span> </a>
+            </div>
+            <!-- <button @click="signOutClient" class="nav_link" >
+                <span class="nav_name">SignOut</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfdJREFUSEuNVUtWwkAQrEb3cAP1BHIB8lwJ3gIvQhIvArfQZGF44XEPuIFrfdC+HmaS+RJYQJjMTHdVV3UTug8BYMD9gbtgv9TP6jyBwHLa+xDI3ha81ws37wniOwHSWShkkexsxPHk5E6LogCmzmj3Wbww8RqEx34/a2IuKxbKA53pffZWbNW6epHiXR9t69UBjIfucgFE6usCzkpT7zlk8/LJBB5gmrCrVswMZIvSSSgQCIC2yhWf2bxUYcPYkYqqQzqAzbWN3vDUfq2UFLsAwwohtJUckqw+KC7HPuxlrwlgihykIlCLTbYolpL5rso1RZEAXoaCVpZmi1JyCSlqvovJ6I8bAqYGpi+TpGSHarCvi+mJuQEwUZRYWRgnuP71FEhA+2UX2RhNXlRCB69jhrlWJ1stwo0bwPhAoNU6QFzXlh0Bkawh1wlwnSLCvs6Foi3AY6n/TGs5pnfPvZ2dA5n6BWyaYnL3y1sCnocCxIo/qCKTrZLpvFgKFykf9LXpn2Rvj95rdqnu6Ns/aG8mK7vIKR+EAyditEBWLgLl5DCAe8r+d3MvslWURBAxQlvlPwDGMY84a6aNEx2z11LNjrCbRm5RA+eeNzhbMyExCEB8xGm0zG4aOEN9ITpK3fGSGPrp5nC1vQeT0aHolksDSG4LidD7D5tXIy5Yv3njAAAAAElFTkSuQmCC" /></button> -->
 
-
-    <div class="area"></div>
-    <nav class="main-menu">
-        <ul>
-            <li>
-                <a href="http://justinfarrow.com">
-                    <i class="fa fa-home fa-2x"></i>
-                    <span class="nav-text">
-                        Dashboard
-                    </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-laptop fa-2x"></i>
-                    <span class="nav-text">
-                        Stars Components
-                    </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-list fa-2x"></i>
-                    <span class="nav-text">
-                        Forms
-                    </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-folder-open fa-2x"></i>
-                    <span class="nav-text">
-                        Pages
-                    </span>
-                </a>
-
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-bar-chart-o fa-2x"></i>
-                    <span class="nav-text">
-                        Graphs and Statistics
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-font fa-2x"></i>
-                    <span class="nav-text">
-                        Quotes
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-table fa-2x"></i>
-                    <span class="nav-text">
-                        Tables
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-map-marker fa-2x"></i>
-                    <span class="nav-text">
-                        Maps
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-info fa-2x"></i>
-                    <span class="nav-text">
-                        Documentation
-                    </span>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="logout">
-            <li>
-                <a href="#">
-                    <i class="fa fa-power-off fa-2x"></i>
-                    <span class="nav-text">
-                        Logout
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+        </nav>
+    </div>
     <!--Container Main start-->
 
     <div id="app">
@@ -119,7 +49,7 @@
             </div>
             <button id="signOut" class="btn btn-danger me-4" @click.prevent="signOutClient()">Sign Out</button>
         </div>
-        <h3 class="p-4 w-25">Your accounts:</h3>
+        <h5 class="p-4 w-25">Your accounts:</h5>
 
         <div class="w-100 container d-flex align-items-center justify-content-start px-2 ">
             <!--Start MuestraCuentas -->
@@ -138,8 +68,8 @@
                             <div class="d-flex flex-column"><span>Balance amount</span>
                                 <p>&dollar; <span class="text-white">{{account.balance}}</span></p>
                             </div>
-                            <button class="btn btn-secondary"><a v-bind:href="`./account.html?id=${account.id}`">See All
-                                    Transactions</a></button>
+                            <a class="btn btn-secondary" v-bind:href="`./account.html?id=${account.id}`">See All
+                                Transactions</a>
                             <!-- <i class="fa fa-arrow-right text-white"></i> -->
                             <button class="btn btn-danger" @click="disableAccount(account.id)">Delete Account</button>
                         </div>
@@ -149,155 +79,166 @@
                     <button class="btn btn-warning" @click="createAccount()">Create an Account</button>
                 </div>
             </div>
-            <!-- End MuestraCuentas -->
+                <!-- End MuestraCuentas -->
 
-            <!-- Begin Bank Accounts card -->
-            <div class="my-card card w-100 p-auto my-2 tarjetas">
-                <div class="my-card cardTarjetas">
-                    <div class="my-card__body card-body">
-                        <div class="my-text-overline">Bank accounts and cards</div>
-                        <a class="my-card__header-link" href="./cards.html">See all Cards →</a>
-                        <h6>Credit Cards</h6>
-                        <div class="credit-card visa selectable"
-                            :class="{'gold_card' : card.cardColor == 'GOLD', 'silver_card' : card.cardColor == 'SILVER', 'platinum_card' : card.cardColor == 'TITANIUM'}"
-                            v-for="card in creditCards">
-                            <div class="credit-card-last4">
-                                {{ultimosNumTarjeta(card.number)}}
-                            </div>
-                            <div class="credit-card-expiry">
-                                {{thruDateTarjeta(card.thruDate)}}
+                    <!-- Begin Bank Accounts card -->
+                    <div class="my-card card w-100 p-auto my-2 tarjetas">
+                        <div class="my-card card tarjetas">
+                            <div class="my-card__body card-body">
+                                <div class="my-text-overline">Bank accounts and cards</div>
+                                <a class="my-card__header-link" href="./cards.html">See all Cards →</a>
+                                <!-- <table class="table table-hover table-secondary w-100">
+                                    <thead>
+                                        <th>Type of Card</th>
+                                        <th>Card Color</th>
+                                        <th>Number</th>
+                                        <th>Thru Date</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="card in cards">
+                                            <td>{{card.cardType}}</td>
+                                            <td>{{card.cardColor}}</td>
+                                            <td>"x-"{{ultimosNumTarjeta(card.number)}}</td>
+                                            <td>{{numTarjeta(card.number)}}</td>
+                                            <td>{{thruDateTarjeta(card.thruDate)}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table> -->
+                                <h6>Credit Cards</h6>
+                                <div class="credit-card visa selectable" :class="{'gold_card' : card.cardColor == 'GOLD', 'silver_card' : card.cardColor == 'SILVER', 'platinum_card' : card.cardColor == 'TITANIUM'}" v-for="card in creditCards">
+                                    <div class="credit-card-last4">
+                                        {{ultimosNumTarjeta(card.number)}}
+                                    </div>
+                                    <div class="credit-card-expiry">
+                                        {{thruDateTarjeta(card.thruDate)}}
+                                    </div>
+                                </div>
+                            
+                                <h6>Debit Cards</h6>
+                                <!-- Mastercard - selectable -->
+                                <div class="credit-card mastercard selectable" :class="{'gold_card' : card.cardColor == 'GOLD', 'silver_card' : card.cardColor == 'SILVER', 'platinum_card' : card.cardColor == 'TITANIUM'}" v-for="card in debitCards">
+                                    <div class="credit-card-last4">
+                                        {{ultimosNumTarjeta(card.number)}}
+                                    </div>
+                                    <div class="credit-card-expiry">
+                                        {{thruDateTarjeta(card.thruDate)}}
+                                    </div>
+                                </div>
+                                <hr class="my-divider">
+                                <ul class="my-list-inline list-inline mb-0">
+                                    <li><a href="./create-cards.html">Request a New Credit or Debit Card →</a></li>
+                                </ul>
                             </div>
                         </div>
-
-                        <h6>Debit Cards</h6>
-                        <!-- Mastercard - selectable -->
-                        <div class="credit-card mastercard selectable"
-                            :class="{'gold_card' : card.cardColor == 'GOLD', 'silver_card' : card.cardColor == 'SILVER', 'platinum_card' : card.cardColor == 'TITANIUM'}"
-                            v-for="card in debitCards">
-                            <div class="credit-card-last4">
-                                {{ultimosNumTarjeta(card.number)}}
-                            </div>
-                            <div class="credit-card-expiry">
-                                {{thruDateTarjeta(card.thruDate)}}
-                            </div>
-                        </div>
-                        <hr class="my-divider">
-                        <ul class="my-list-inline list-inline mb-0">
-                            <li><a href="./create-cards.html">Request a New Credit or Debit Card →</a></li>
-                        </ul>
                     </div>
-                </div>
-            </div>
-            <!--- End Bank Accounts card -->
+                    <!--- End Bank Accounts card -->
         </div>
 
-
-        <div class="d-flex justify-content-around align-items-center px-2 w-100 div1">
-            <!-- Begin Loans card -->
-            <div class="my-card card my-2 transactions w-50 px2 tarjetas">
-                <div class="my-card__header card-header">
-                    <h3 class="my-card__header-title card-title">Loans </h3>
-                    <a class="my-card__header-link" href="#">See all →</a>
-                </div>
-                <ul class="my-list list-group list-group-flush ">
-                    <li class="my-list-item list-group-item" v-for="loan in loans">
-                        <div v-if="loans.length == 0">
-                            <p>hola</p>
-                        </div>
-                        <div class="my-list-item__date">
-                            <span class="my-list-item__date-day">{{loan.name}}</span>
-                            <span class="my-list-item__date-month">Type of Loan:</span>
-                        </div>
-
-                        <div class="my-list-item__text">
-                            <p class="my-list-item__text-description mx-2 px-2">Loan's Ammount:</p>
-                            <span class="my-list-item__fee-delta me-2 px-2">$ {{loan.amount}} <span
-                                    class="my-list-item__fee-currency px-2">USD</span></span>
-                        </div>
-                        <div class="my-list-item__text me-2 px-2">
-                            <span class="my-list-item__fee-text"> Loan Fees: </span>
-                            <span class="my-list-item__date-month">{{loan.payments}}</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- End Loans card -->
-            <div class="d-flex flex-column align-items-center justify-content-center w-50 px-2 tarjetas">
-
-                <div class="my-alert alert alert-info my-2 w-100 d-flex justify-content-center">
-                    <img class="my-alert__icon" src="./images/icon-alert.svg" alt>
-                    <span class="my-alert__text">
-                        Your latest transaction may take a few minutes to show up in your activity.
-                    </span>
-                </div>
-
-                <!-- Begin Completed card -->
-                <div class="my-card card transactions tarjetas">
+        
+            <div class="d-flex justify-content-around align-items-center px-2 w-100 div1">
+                <!-- Begin Loans card -->
+                <div class="my-card card my-2 transactions w-50 px2 tarjetas">
                     <div class="my-card__header card-header">
-                        <h3 class="my-card__header-title card-title">Completed</h3>
+                        <h3 class="my-card__header-title card-title">Loans </h3>
                         <a class="my-card__header-link" href="#">See all →</a>
                     </div>
-                    <ul class="my-list list-group list-group-flush">
-                        <li class="my-list-item list-group-item">
+                    <ul class="my-list list-group list-group-flush ">
+                        <li class="my-list-item list-group-item" v-for="loan in loans">
+
                             <div class="my-list-item__date">
-                                <span class="my-list-item__date-day">3</span>
-                                <span class="my-list-item__date-month">may</span>
+                                <span class="my-list-item__date-day">{{loan.name}}</span>
+                                <span class="my-list-item__date-month">Type of Loan:</span>
                             </div>
+
                             <div class="my-list-item__text">
-                                <h4 class="my-list-item__text-title">MindHub, Inc</h4>
-                                <p class="my-list-item__text-description">Withdraw to bank account</p>
+                                <p class="my-list-item__text-description mx-2 px-2">Loan's Ammount:</p>
+                                <span class="my-list-item__fee-delta me-2 px-2">$ {{loan.amount}} <span
+                                        class="my-list-item__fee-currency px-2">USD</span></span>
                             </div>
-                            <div class="my-list-item__fee">
-                                <span class="my-list-item__fee-delta">+250.00</span>
-                                <span class="my-list-item__fee-currency">USD</span>
-                            </div>
-                        </li>
-                        <li class="my-list-item list-group-item">
-                            <div class="my-list-item__date">
-                                <span class="my-list-item__date-day">2</span>
-                                <span class="my-list-item__date-month">may</span>
-                            </div>
-                            <div class="my-list-item__text">
-                                <h4 class="my-list-item__text-title">Spotify Limited</h4>
-                                <p class="my-list-item__text-description">Preapproved Payment</p>
-                            </div>
-                            <div class="my-list-item__fee">
-                                <span class="my-list-item__fee-delta">+15.00</span>
-                                <span class="my-list-item__fee-currency">USD</span>
-                            </div>
-                        </li>
-                        <li class="my-list-item list-group-item">
-                            <div class="my-list-item__date">
-                                <span class="my-list-item__date-day">29</span>
-                                <span class="my-list-item__date-month">apr</span>
-                            </div>
-                            <div class="my-list-item__text">
-                                <h4 class="my-list-item__text-title">BankrdoX</h4>
-                                <p class="my-list-item__text-description">Withdraw to bank account</p>
-                            </div>
-                            <div class="my-list-item__fee">
-                                <span class="my-list-item__fee-delta">+175.00</span>
-                                <span class="my-list-item__fee-currency">USD</span>
+                            <div class="my-list-item__text me-2 px-2">
+                                <span class="my-list-item__fee-text"> Loan Fees: </span>
+                                <span class="my-list-item__date-month">{{loan.payments}}</span>
                             </div>
                         </li>
                     </ul>
                 </div>
+                <!-- End Loans card -->
+                <div class="d-flex flex-column align-items-center justify-content-center w-50 px-2 tarjetas">
+
+                    <div class="my-alert alert alert-info my-2 w-100 d-flex justify-content-center">
+                        <img class="my-alert__icon" src="./images/icon-alert.svg" alt>
+                        <span class="my-alert__text">
+                            Your latest transaction may take a few minutes to show up in your activity.
+                        </span>
+                    </div>
+
+                    <!-- Begin Completed card -->
+                    <div class="my-card card transactions tarjetas">
+                        <div class="my-card__header card-header">
+                            <h3 class="my-card__header-title card-title">Completed</h3>
+                            <a class="my-card__header-link" href="#">See all →</a>
+                        </div>
+                        <ul class="my-list list-group list-group-flush">
+                            <li class="my-list-item list-group-item">
+                                <div class="my-list-item__date">
+                                    <span class="my-list-item__date-day">3</span>
+                                    <span class="my-list-item__date-month">may</span>
+                                </div>
+                                <div class="my-list-item__text">
+                                    <h4 class="my-list-item__text-title">MindHub, Inc</h4>
+                                    <p class="my-list-item__text-description">Withdraw to bank account</p>
+                                </div>
+                                <div class="my-list-item__fee">
+                                    <span class="my-list-item__fee-delta">+250.00</span>
+                                    <span class="my-list-item__fee-currency">USD</span>
+                                </div>
+                            </li>
+                            <li class="my-list-item list-group-item">
+                                <div class="my-list-item__date">
+                                    <span class="my-list-item__date-day">2</span>
+                                    <span class="my-list-item__date-month">may</span>
+                                </div>
+                                <div class="my-list-item__text">
+                                    <h4 class="my-list-item__text-title">Spotify Limited</h4>
+                                    <p class="my-list-item__text-description">Preapproved Payment</p>
+                                </div>
+                                <div class="my-list-item__fee">
+                                    <span class="my-list-item__fee-delta">+15.00</span>
+                                    <span class="my-list-item__fee-currency">USD</span>
+                                </div>
+                            </li>
+                            <li class="my-list-item list-group-item">
+                                <div class="my-list-item__date">
+                                    <span class="my-list-item__date-day">29</span>
+                                    <span class="my-list-item__date-month">apr</span>
+                                </div>
+                                <div class="my-list-item__text">
+                                    <h4 class="my-list-item__text-title">BankrdoX</h4>
+                                    <p class="my-list-item__text-description">Withdraw to bank account</p>
+                                </div>
+                                <div class="my-list-item__fee">
+                                    <span class="my-list-item__fee-delta">+175.00</span>
+                                    <span class="my-list-item__fee-currency">USD</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <!-- End Completed card -->
+
         </div>
-        <!-- End Completed card -->
 
-    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src=" https://unpkg.com/vue@3"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src=" https://unpkg.com/vue@3"></script>
-
-    <script src="./accounts.js"></script>
+        <script src="./accounts.js"></script>
 
 </body>
 

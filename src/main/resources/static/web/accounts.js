@@ -58,12 +58,12 @@ Vue.createApp({
     },
 
     created() {
-        axios.get('/api/clients')
+        axios.get('http://localhost:8585/api/clients')
             .then(datos => {
                 this.clientes = datos.data
             })
 
-        axios.get('/api/clients/current')
+        axios.get('http://localhost:8585/api/clients/current')
             .then(datos =>{
                 this.cliente1 = datos.data
                 console.log(this.cliente1)
@@ -73,7 +73,7 @@ Vue.createApp({
                 this.accounts = this.accounts.filter(account => account.disable == false);
                 this.cuenta1 = this.accounts[0];
                 this.loans = this.cliente1.clientLoans
-                console.log(this.loans);
+                console.log(this.accounts);
             })
 
         
@@ -84,14 +84,14 @@ Vue.createApp({
         
         disableAccount(id){
 
-            axios.patch('/api/clients/current/accounts',
+            axios.patch('http://localhost:8585/api/clients/current/accounts',
             `id=${id}`,
             { headers: { "content-type": "application/x-www-form-urlencoded" } }
             )
                 .then(function (response) {
                     console.log("Account deleted!!!");
 
-                    window.location.href = "/web/accounts.html";
+                    window.location.href = "http://localhost:8585/web/accounts.html";
                 })
                         .catch(function (error) {
                         console.log(error);
@@ -143,11 +143,11 @@ Vue.createApp({
                     console.log("Que ande o me mato")
                     axios.post('/api/logout')
                         .then(response => console.log("Que ande o me mato"))
-                    window.location.href = "/web/index.html"
+                    window.location.href = "http://localhost:8585/web/index.html"
                 },
 
                 createAccount(){
-                    axios.post("/api/clients/current/accounts")
+                    axios.post("http://localhost:8585/api/clients/current/accounts")
                     .then(console.log("Account created"))
                         .then(function (loadData) {
                             location.reload(loadData);

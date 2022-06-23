@@ -54,14 +54,14 @@ Vue.createApp({
     },
 
     created() {
-        axios.get('/rest/clients')
+        axios.get('http://localhost:8585/rest/clients')
             .then(datos => {
 
                 this.clientes = datos.data._embedded.clients
 
             })
 
-        axios.get('/rest/clients/1')
+        axios.get('http://localhost:8585/rest/clients/1')
             .then(datos =>{
                 this.cliente1 = datos.data
             })
@@ -69,7 +69,7 @@ Vue.createApp({
 
     methods: {
         crearCliente(){
-            axios.post('/rest/clients',{
+            axios.post('http://localhost:8585/rest/clients',{
                 nombre:this.nombreCliente,
                 apellido:this.apellidoCliente,
                 mail:this.mailCliente,
