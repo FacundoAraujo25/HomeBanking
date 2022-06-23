@@ -35,6 +35,7 @@ public class AccountDTO {
         this.id = account.getId();
         this.transactions = account.getTransactions().stream().map(TransactionDTO::new).collect(toSet());
         this.disable = account.isDisable();
+        this.accountType = account.getAccountType();
     }
 
     public long getId() {

@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import static com.mindhub.HomeBanking.toolsBox.utils.getRandomAccountNumber;
 import static java.util.stream.Collectors.toList;
@@ -93,10 +95,12 @@ public class AccountController {
 
     Client client =  clientService.findByMail(authentication.getName());
 
+        Set<Account> clientAccounts= client.getAccounts().stream().filter(account -> account.isDisable()==false).collect(Collectors.toSet());
+
     String randomAccountNumber = "VIN-" + getRandomAccountNumber(99999999,1); //MI PEQUEÑO GRAN ORGULLO
 
 
-        if (client.getAccounts().size() >= 3) {
+        if (clientAccounts.size() >= 3) {
 
             return new ResponseEntity<>("You are not allowed to create more accounts.", HttpStatus.FORBIDDEN);
 

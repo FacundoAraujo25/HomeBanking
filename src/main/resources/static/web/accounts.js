@@ -54,6 +54,7 @@ Vue.createApp({
             fechaTarjeta:"",
             mesTarjeta:"",
             anioTarjeta:"",
+            accountType:"",
         }
     },
 
@@ -63,7 +64,7 @@ Vue.createApp({
                 this.clientes = datos.data
             })
 
-        axios.get('/api/clients/current')
+        axios.get('http://localhost:8585/api/clients/current')
             .then(datos =>{
                 this.cliente1 = datos.data
                 console.log(this.cliente1)
@@ -147,7 +148,10 @@ Vue.createApp({
                 },
 
                 createAccount(){
-                    axios.post("/api/clients/current/accounts")
+                    axios.post("/api/clients/current/accounts",
+                    `accountType=${this.accountType}`,
+            { headers: { "content-type": "application/x-www-form-urlencoded" } }
+            )
                     .then(console.log("Account created"))
                         .then(function (loadData) {
                             location.reload(loadData);

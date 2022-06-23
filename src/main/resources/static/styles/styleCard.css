@@ -1,13 +1,42 @@
 /* Radio Buttons */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+header {
+    background-color: #F4F7D2;
+    height: 6rem;
+    width: 100%;
+}
+
+h2 {
+    color: #8E5572;
+    text-align: center;
+}
+
+#logo_banco {
+    width: 6rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.logo_nav {
+    width: 2rem;
+    color: #C2B97F;
+}
+
+#foto_perfil {
+    width: 6rem;
+}
 /* -------------------- */
 
 .form {
     border-radius: 50px;
-    background: #4E4D8F;
-    box-shadow: 20px 20px 60px #bebebe,
-        -20px -20px 60px #ffffff;
+    background: #cb761b;
+    box-shadow: 20px 20px 60px #bebebe;
 }
 
 /* NavBar Start */
@@ -16,9 +45,10 @@
 :root {
     --header-height: 3rem;
     --nav-width: 68px;
-    --first-color: #8E5572;
-    --first-color-light: #C2B97F;
-    --white-color: #F7F6FB;
+    --first-color: #ECC257;
+    --first-color-light: #ECC257;
+    --white-color: #DC904D;
+    /* header */
     --body-font: 'Nunito', sans-serif;
     --normal-font-size: 1rem;
     --z-fixed: 100
@@ -31,22 +61,22 @@
 }
 
 body {
+    width: calc(100vw - var(--nav-width));
     position: relative;
     margin: var(--header-height) 0 0 0;
     padding: 0 1rem;
-    font-family: var(--body-font);
+    font-family: sans-serif;
     font-size: var(--normal-font-size);
     transition: .5s;
-    background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);
-
+    color: #F4F7D2;
 }
-
 
 a {
     text-decoration: none
 }
 
 .header {
+    background-color: #2CA7D2;
     width: 100%;
     height: var(--header-height);
     position: fixed;
@@ -77,7 +107,7 @@ a {
 }
 
 .header_img img {
-    width: 40px
+    width: 40px;
 }
 
 .l-navbar {
@@ -93,24 +123,26 @@ a {
 }
 
 .nav {
+    min-width: 4rem;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    align-items: flex-start;
+    overflow: hidden
 }
 
 .nav_logo,
 .nav_link {
     display: grid;
     grid-template-columns: max-content max-content;
-    align-items: center;
+    align-items: flex-start;
     column-gap: 1rem;
     padding: .5rem 0 .5rem 1.5rem
 }
 
 .nav_logo {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
 .nav_logo-icon {
@@ -125,9 +157,13 @@ a {
 
 .nav_link {
     position: relative;
-    color: var(--first-color-light);
     margin-bottom: 1.5rem;
     transition: .3s
+}
+
+.nave_link span {
+    color: #4E4D8F;
+
 }
 
 .nav_link:hover {
@@ -163,6 +199,11 @@ a {
     height: 100vh
 }
 
+.transfer-table {
+    color: #0d0925;
+}
+
+
 @media screen and (min-width: 768px) {
     body {
         margin: calc(var(--header-height) + 1rem) 0 0 0;
@@ -197,542 +238,235 @@ a {
     }
 }
 
-header {
-    background-color: #8E5572;
-    height: 6rem;
-    width: 100%;
-}
-
-.logo_nav {
-    width: 2rem;
-    color: #C2B97F;
-}
-
 /* NavBar Fin */
 
 /* ------------ Credit/Debit Cards Start ------------ */
 
-*{
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body,
+html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ECC257;
 }
 
 body {
-    font-family: "Roboto Condensed", sans-serif;
-}
-
-.font-normal {
-    font-family: "Roboto Condensed", sans-serif;
-}
-
-.font-number {
-    font-family: "Orbitron", sans-serif;
-}
-
-.font-logo {
-    font-family: "Lobster", cursive;
-}
-
-.card {
-    width: 100%;
-    height: 50vh;
-    position: relative;
-    background-attachment: fixed;
-    background-size: cover;
-    background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);
-}
-
-.card__container {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 270px;
-    height: 100px;
-}
-
-.card__extra {
-    position: absolute;
-    top: 36%;
-    right: 20px;
-    font-size: 26px;
-    transform: rotate(90deg);
-    color: #101010;
-}
-
-.card__front {
-    width: 370px;
-    height: 240px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 38px 4px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    z-index: 22;
-    animation-name: cardFront;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-}
-
-.card__back {
-    width: 370px;
-    height: 240px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 38px 4px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    background-color: #ffc500;
-    background-image: -webkit-linear-gradient(135deg, #ffc500 25%, #e78f13 100%);
-    background-image: -moz-linear-gradient(135deg, #ffc500 25%, #e78f13 100%);
-    background-image: -o-linear-gradient(135deg, #ffc500 25%, #e78f13 100%);
-    background-image: linear-gradient(135deg, #ffc500 25%, #e78f13 100%);
-    z-index: 11;
-    animation-name: cardBack;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-}
-
-.card__back--bottom {
-    display: flex;
-    justify-content: space-between;
-    width: 88%;
-    margin: 7px auto;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 10px;
-    color: #ffa44b;
-}
-
-.card__back--shape {
-    position: absolute;
-    background: #101010; /* texto de bien arriba dorso tarjeta*/
-    width: 160px;
-    height: 500px;
-    transform: rotate(84deg);
-    left: 55px;
-    border-radius: 27%;
-    border: 4px solid #eab500;
-    box-shadow: 0 0 1px 5px #101010;
-    top: 13px;
-    z-index: -1;
-}
-
-.card__contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
-}
-
-.card__contact--txt {
-    font-size: 9px;
-    font-weight: 700;
-    padding: 7px 20px;
-    color: #ffffff; /* texto de bien arriba dorso tarjeta*/
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-}
-
-.card__strip {
-    width: 100%;
-    height: 45px;
-    background: #131313; /* franja seguridad dorso tarjeta*/
-    margin: 4px 0;
-}
-
-.card__company--address {
-    font-size: 8px;
-    margin-top: 15px;
-    margin-left: 20px;
-}
-
-.card__company--msg {
-    font-size: 8px;
-    margin-top: 2px;
-    margin-left: 20px;
-}
-
-.card__cvc {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 20px;
-}
-
-.card__cvc--strip {
-    width: 200px;
-    background: #d3d3d3; /* barra seguridad cvv dorso tarjeta */
-    height: 45px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.card__cvc--txt {
-    background: wheat; /* recuadro resaltado cvv dorso tarjeta */
-    margin-left: 6px;
-    padding: 2px 6px;
-    font-style: italic;
-    font-weight: 700;
-    color: #000000;
-    font-size: 16px;
-}
-
-.card__cvc--num {
-    font-size: 16px;
-    font-weight: 600;
-    color: black; /* color numero cvv dorso tarjeta*/
-}
-
-.card__cvc--warning {
-    font-size: 5px;
-    margin-left: 25px;
-    margin-top: 2px;
-    font-style: italic;
-}
-
-.card__brand {
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 50%;
-    position: absolute;
-    transform: translate(-50%);
-}
-
-.card__brand--name {
-    font-size: 20px;
-    font-weight: 700;
-    color: black;  /* texto marca derecha arriba frente tarjeta*/
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-}
-
-.card__brand--logo {
-    font-size: 21px;
-}
-
-.card__number {
-    position: relative;
-    top: 62%;
-    padding-left: 30px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #ffc500;
-    text-shadow: 0px 0px 2px #4a2d00;
-    letter-spacing: 1px;
-}
-
-.card__user {
-    position: relative;
-    top: 70%;
-    display: flex;
-    left: 30px;
-    color: #ffffff;
-}
-
-.card__user--name {
-    font-size: 16px;
-    letter-spacing: 1.4px;
-    font-weight: 700;
-    text-shadow: 0 0 3px #060606;
-}
-
-.card__user--valid {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-.card__user--valid-txt {
-    display: inline-flex;
-    font-size: 10px;
-    margin-bottom: 5px;
-    text-shadow: 0 0 3px #060606;
-}
-
-.card__user--valid-date {
-    font-size: 12px;
-    font-weight: 700;
-    text-shadow: 0 0 3px #060606;
-}
-
-.card__payment {
-    position: absolute;
-    color: #ffc500;  /* cuadrito visa*/
-    bottom: 20px;
-    right: 27px;
-    font-size: 2.5em;
-}
-
-.card__front--bg {
-    position: absolute;
-    background-color: #ffc500;
-    background-image: -webkit-linear-gradient(135deg, #ffc500 25%, #e78f13 100%);
-    background-image: -moz-linear-gradient(135deg, #ffc500 25%, #e78f13 100%);
-    background-image: -o-linear-gradient(135deg, #ffc500 25%, #e78f13 100%);
-    background-image: linear-gradient(135deg, #ffc500 25%, #e78f13 100%); /* gradient superior frente tarjeta */
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.card__chip {
-    position: absolute;
-    top: 86px;
-    left: 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #101010;
-}
-
-.card__chip--shape {
-    width: 43px;
-    height: 9px;
-    background: #efb35b; /* chip frente tarjeta */
-    border-radius: 1px;
-    margin-bottom: 1px;
-}
-
-.card__chip--shape:last-child {
-    margin-bottom: 0;
-    border-radius: 1px 1px 3px 3px;
-}
-
-.card__chip--shape:first-child {
-    border-radius: 3px 3px 1px 1px;
-}
-
-.card__chip--shape:first-child:after {
-    content: "";
-    position: absolute;
-    background: #efb35b; /* parte de adentro chip frente tarjeta */
-    border: 1px solid #101010;
-    width: 12px;
-    height: 23px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-}
-
-.card__chip:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-right: 12px solid #fab25e40;
-    border-bottom: 8px solid transparent;
-    left: -20px;
-    top: 7px;
-}
-
-.card__stamp {
-    width: 54px;
-    height: 35px;
-    background: radial-gradient(#ffffff, #a9a9a9);  /* ovalo seguridad dorso tarjeta */
-    position: absolute;
-    right: 15px;
-    bottom: 80px;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 13px 0px rgba(0, 0, 0, 0.2);
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);
+    flex-direction: column;
+    -webkit-flex-direction: column;
 }
 
-.card__stamp:after {
-    content: "d&p";
-    position: absolute;
-    opacity: 0.1;
-    color: #4c320c;
-    font-weight: 900;
-    font-size: 18px;
-    text-shadow: 0 1px 1px #4e4d4d;
-    border: 1px solid #8e8b8b;
-    width: 70%;
-    height: 70%;
-    text-align: center;
-    border-radius: 30px;
+
+.title {
+    margin-bottom: 30px;
+    color: #162969;
 }
 
-.card__plast {
+.card {
+    width: 320px;
+    height: 190px;
+    background-color: #c7eec700 !important;
+    border: none;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    perspective: 600px;
+
+}
+
+.card__part {
+    box-shadow: 1px 1px #aaa3a3;
+    top: 0;
     position: absolute;
+    z-index: 1000;
     left: 0;
-    width: 15px;
-    height: 100%;
+    display: inline-block;
+    width: 320px;
+    height: 190px;
+    background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(to right bottom, #fd696b, #fa616e, #f65871, #f15075, #ec4879);
+    /*linear-gradient(to right bottom, #fd8369, #fc7870, #f96e78, #f56581, #ee5d8a)*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 
-.card__plast:after {
-    content: "www.samplecard-plast.com.xx";
+.card__front {
+    padding: 18px;
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+}
+
+.card__back {
+    padding: 18px 0;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+}
+
+.card__black-line {
+    margin-top: 5px;
+    height: 38px;
+    background-color: #303030;
+}
+
+.card__logo {
+    height: 16px;
+}
+
+
+.card__front-logo {
     position: absolute;
-    transform: rotate(270deg) translateY(-50%);
+    top: 18px;
+    right: 18px;
+}
+.logo_tarjeta.logo-visa{
+    width: 3rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    background-image: url('data:image/png;base64,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');
+}
+
+.logo_tarjeta.logo-mastercard{
+    width: 3rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    background-image: url('data:image/png;base64,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');
+}
+
+.logo_tarjeta {
+    width: 2rem;
+    height: 4rem;
+}
+
+.card__square {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.card_numer {
+    display: block;
+    width: 100%;
+    word-spacing: 4px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #303030;
     text-align: center;
-    width: 15px;
-    white-space: nowrap;
-    bottom: 30%;
-    font-size: 6px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.card .logo {
-    display: flex;
+.card__space-75 {
+    width: 75%;
+    float: left;
+}
+
+.card__space-25 {
+    width: 25%;
+    float: left;
+}
+
+.card__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #303030;
+    letter-spacing: 1px;
+}
+
+.card__info {
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #303030;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card__back-content {
+    padding: 15px 15px 0;
+}
+
+.card__secret--last {
+    color: #303030;
+    text-align: right;
+    margin: 0;
+    font-size: 14px;
+}
+
+.card__secret {
+    padding: 5px 12px;
+    background-color: linear-gradient(#a2beeb, #8ecfee, #8edde5, #a4e7d5, #c7eec7);
     position: relative;
-    bottom: 2px;
 }
 
-.card .logo--shape {
-    position: relative;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    opacity: 0.6;
-}
-
-.card .logo-red {
-    background: #ff0000;
-    left: 5px;
-}
-
-.card .logo-yellow {
-    background: #ffff00;
-    right: 5px;
-}
-
-.card .logo-name {
-    position: relative;
-    left: 0;
+.card__secret:before {
+    content: '';
+    position: absolute;
     top: -3px;
-    font-size: 12px;
-    color: white;
-    opacity: 0.2;
+    left: -3px;
+    height: calc(100% + 6px);
+    width: calc(100% - 42px);
+    border-radius: 4px;
+    background: repeating-linear-gradient(45deg, #ededed, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
 }
 
-.card .logo-mid {
-    font-size: 40px;
-}
-
-.card .logo-d {
-    left: 3px;
-}
-
-.card .logo-p {
-    right: 7px;
-}
-
-.card .logo-letter {
-    position: relative;
-    text-shadow: 0 0 5px #000000b8;
-}
-
-.card .front--bg--s1 {
-    position: relative;
-    background: #101010; /* parte ondulada frente tarjeta */
-    width: 260px;
-    height: 510px;
-    transform: rotate(105deg);
-    bottom: 21px;
-    left: 75px;
-    border-radius: 30%;
-    border: 4px solid #eab500;
-    box-shadow: 0 0 1px 5px #101010;
-}
-
-.card .front--bg--s2 {
+.card__back-logo {
     position: absolute;
-    top: -20px;
-    display: flex;
-    transform: rotate(-1deg);
-    z-index: -1;
+    bottom: 15px;
+    right: 15px;
 }
 
-.card .strip-shape {
-    background: #dcaa7b80;  /* franja seguridad dorso tarjeta */
-    width: 80px;
-    height: 60px;
-    transform: rotate(130deg) translateX(-50%);
-    position: relative;
-    left: -11px;
-    top: 35%;
-    border: 1px solid #ffffffa8;
+.card__back-square {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
 }
 
-@keyframes cardFront {
-    from {
-        left: 0;
-        top: 0;
-    }
+.card:hover .card__front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
 
-    to {
-        left: -52%;
-        top: -12%;
-    }
 }
 
-@keyframes cardBack {
-    from {
-        left: 0;
-        top: 0;
-    }
-
-    to {
-        left: 52%;
-        top: 12%;
-    }
+.card:hover .card__back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
 }
-
-@media all and (max-width: 768px) {
-    @keyframes cardFront {
-        from {
-            left: 0;
-            top: 0;
-        }
-
-        to {
-            left: 0%;
-            top: -54%;
-        }
-    }
-
-    @keyframes cardBack {
-        from {
-            left: 0;
-            top: 0;
-        }
-
-        to {
-            left: 0%;
-            top: 54%;
-        }
-    }
-}
-
-@media all and (max-width: 420px) {
-    .card__container {
-        transform: translate(-50%, -50%) scale(0.8);
-    }
-}
-
-/* ------------ Credit/Debit Cards End ------------ */
-
 
 .gold_card {
-    background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(to right bottom, #ffff25, #fff615, #ffd700, #e6b900, #ce9d00) !important;
+    background: linear-gradient(to right,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)!important;
     color: #303030 !important;
 }
 
 .silver_card {
-    background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(to right bottom, #c5e7ea, #c4dedf, #c3d5d4, #c2cbca, #c0c0c0, #bdb5b8, #b9abb2, #b5a3ad, #af9baa) !important;
-    color: #303030 !important;
+    background: linear-gradient(to right,#6e7678, #FCF6BA, #b1b9bb, #FBF5B7, #A3ABAD)!important;
+    color: white !important;
 }
 
 .platinum_card {
-    background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(to right bottom, #ffffff, #f3f7ff, #e5e4e2, #d9d0c3, #cfbea7) !important;
-    color: #303030 !important;
+    background: linear-gradient(to right,#878681, #696757, #7f8c8d, #57564b, #878681)!important;
+    color: white !important;
 }

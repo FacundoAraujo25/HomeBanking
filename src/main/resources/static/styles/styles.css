@@ -30,6 +30,10 @@ h2 {
     width: 6rem;
 }
 
+.fade{
+    width: 100vw !important;
+}
+
 
 .botones-tabla {
     border-radius: 4rem;
@@ -42,21 +46,24 @@ h2 {
 .contenedor_tarjetas {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    width: 40vw;
 }
 
 .container{
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .cardCuentas{
-    width: 20vw !important;
+    width: 20vw;
     border: none;
     border-radius: 10px;
     border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .my-alert__text{
@@ -67,6 +74,8 @@ h2 {
 #signOut{
     width: 7vw;
     height: 3vw;
+    margin-top: 1rem;
+
 }
 
 /* ------------ Cards Container ------------ */
@@ -99,7 +108,7 @@ h2 {
 
 .credit-card-last4 {
     font-family: "PT Mono", Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .credit-card-last4:before {
@@ -138,18 +147,18 @@ h2 {
     color: #8a82dd;
 }
 
-.gold_card {
+.credit-card.gold_card {
     background: linear-gradient(to right,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)!important;
     color: #303030 !important;
 }
 
-.silver_card {
+.credit-card.silver_card {
     background-color: #2d3436;
     background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%)!important;
     color: #303030 !important;
 }
 
-.platinum_card {
+.credit-card.platinum_card {
     background-color: #000000;
     background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
     color: #303030 !important;
@@ -203,7 +212,7 @@ h2 {
 }
 
 body {
-    min-width: 100vw;
+    width: calc(100vw - var(--nav-width));
     position: relative;
     margin: var(--header-height) 0 0 0;
     padding: 0 1rem;
@@ -386,7 +395,7 @@ a {
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 .card {
-    width: 30vw !important;
+    width: calc(30vw - var(--nav-width));
     border: none;
     border-radius: 10px;
     background-color: #F4F7D2;
@@ -414,7 +423,7 @@ a {
     background: #3E454D;
     border-radius: 6px;
     width:15vw;
-    height: 30vh;
+    height: 45vh;
 }
 
 .flex-column {
@@ -624,57 +633,25 @@ a {
         justify-content: center;
     }
 
-    .div1 {
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-    }
-
+    
     .container {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
+    
 }
 
-/* @media (min-width:571px){
-
-    h2{
-        color: #8E5572;
-        text-align: center;
-    }
-
-    .div-total {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .transactions{
-        width: 50vw;
-        justify-content: center;
-    }
-
-    .tarjetas{
-        width: 50vw!important;
-        justify-content: center;
-    }
-
-    .div1{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contenedor_tarjetas{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}    */
+.div1 {
+    width: calc(100vw - var(--nav-width));
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: #3BAD4B;
+}
 
 #app{
-    width: 100vw;
+    width: calc(100vw - var(--nav-width));
 }
 
 
@@ -699,7 +676,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    min-width: 100vw;
+    min-width:  calc(100vw - var(--nav-width));
     font-family: "Fira Sans", sans-serif;
     display: flex;
 }
