@@ -140,10 +140,10 @@ Vue.createApp({
                 },
                 
                 signOutClient(){
-                    console.log("Que ande o me mato")
+                    
                     axios.post('/api/logout')
-                        .then(response => console.log("Que ande o me mato"))
-                    window.location.href = "/web/index.html"
+                        .then(response => 
+                    window.location.href = "/web/index.html")
                 },
 
                 createAccount(){
