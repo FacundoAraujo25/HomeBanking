@@ -62,22 +62,20 @@ public class HomeBankingApplication {
             repositoryAccount.save(account4);
 
             Transaction transaction1 = new Transaction(DEBIT,2500,"Revista AVON",LocalDateTime.now(),account1,account1.getBalance()-2500);
-            //Transaction transaction2 = new Transaction(CREDIT,375,"Cuota MindHub",LocalDateTime.now().minusDays(1),account4);
-            //Transaction transaction3 = new Transaction(DEBIT,72,"Nintendo DS",LocalDateTime.now().plusDays(2),account3);
-            //Transaction transaction4 = new Transaction(DEBIT,5750,"BankrdoX",LocalDateTime.now(),account2);
-            //Transaction transaction5 = new Transaction(CREDIT,1310,"Suscripción premium MindHubNeta",LocalDateTime.now().plusDays(1),account1);
-            //Transaction transaction6 = new Transaction(DEBIT,3210,"Suscripción premium MindHubNeta",LocalDateTime.now(),account1);
-            //Transaction transaction7 = new Transaction(CREDIT,470,"Suscripción premium MindHubNeta",LocalDateTime.now(),account2);
-            //Transaction transaction8 = new Transaction(DEBIT,720,"Suscripción premium MindHubNeta",LocalDateTime.now(),account2);
+            Transaction transaction2 = new Transaction(CREDIT,375,"Cuota MindHub",LocalDateTime.now().minusDays(1),account4,account4.getBalance()-375);
+            Transaction transaction4 = new Transaction(DEBIT,5750,"BankrdoX",LocalDateTime.now(),account2,account2.getBalance()-5750);
+            Transaction transaction5 = new Transaction(CREDIT,1310,"Suscripción premium MindHubNeta",LocalDateTime.now().plusDays(1),account1,account1.getBalance()+1310);
+            Transaction transaction6 = new Transaction(DEBIT,3210,"Suscripción premium MindHubNeta",LocalDateTime.now(),account1,account1.getBalance()-3210);
+            Transaction transaction7 = new Transaction(CREDIT,470,"Suscripción premium MindHubNeta",LocalDateTime.now(),account2,account1.getBalance()+470);
+            Transaction transaction8 = new Transaction(DEBIT,720,"Suscripción premium MindHubNeta",LocalDateTime.now(),account2,account2.getBalance()-720);
 
             transactionRepository.save(transaction1);
-//            transactionRepository.save(transaction2);
-//            transactionRepository.save(transaction3);
-//            transactionRepository.save(transaction4);
-//            transactionRepository.save(transaction5);
-//            transactionRepository.save(transaction6);
-//            transactionRepository.save(transaction7);
-//            transactionRepository.save(transaction8);
+            transactionRepository.save(transaction2);
+            transactionRepository.save(transaction4);
+            transactionRepository.save(transaction5);
+            transactionRepository.save(transaction6);
+            transactionRepository.save(transaction7);
+            transactionRepository.save(transaction8);
 
             Loan loan1 = new Loan("Hipotecario",500000, List.of(12,24,36,48,60),7.5f);
             Loan loan2 = new Loan("Personal",100000, List.of(6,12,24),3.9f);
