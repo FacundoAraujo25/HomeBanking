@@ -4,8 +4,8 @@
    height="24"
    version="1.1"
    id="svg4"
-   sodipodi:docname="bx-up-arrow-left.svg"
-   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="flechita_fachera3.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,16 +22,18 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="16"
-     inkscape:cx="12.34375"
+     inkscape:cx="12.3125"
      inkscape:cy="9.875"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
+     inkscape:current-layer="svg4"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#505050" />
   <path
      d="M 7.949469,10.023244 17.917243,20 20,17.921578 10.032226,7.9448209 l 8.93461,0.00668 0.0022,-2.9410845 L 5.010404,5 5,18.950394 l 2.942824,0.0022 z"
      id="path2"
-     style="stroke-width:1.47119" />
+     style="stroke-width:1.47119;fill:#cccccc" />
 </svg>

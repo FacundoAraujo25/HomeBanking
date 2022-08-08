@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Your code to run since DOM is loaded and ready
     });
 
-Vue.createApp({
+const app = Vue.createApp({
 
     data() {
         return {

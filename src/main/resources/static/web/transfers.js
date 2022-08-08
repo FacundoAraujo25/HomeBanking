@@ -24,7 +24,7 @@ Vue.createApp({
     .then((datos) => {
       this.cliente1 = datos.data;
       console.log(this.cliente1);
-      this.accounts = this.cliente1.accounts;
+      this.accounts = this.cliente1.accounts.filter(account => account.disable == false);
     });
   },
 

@@ -30,7 +30,7 @@ public class WebAuthentication extends GlobalAuthenticationConfigurerAdapter {
 
             if (client != null) {
 
-                    if(client.getFullName() == "Admin Admin"){
+                    if(client.getFullName().equals("Admin Admin")){
                         return new User(client.getMail(),client.getPassword(), AuthorityUtils.createAuthorityList("ADMIN"));
                     }
                     else {

@@ -89,7 +89,7 @@ public class ClientController {
 
         if (clientService.findByMail(mail) != null) {
 
-            return new ResponseEntity<>("Name already in use", HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>("Email already in use", HttpStatus.FORBIDDEN);
 
         }
 

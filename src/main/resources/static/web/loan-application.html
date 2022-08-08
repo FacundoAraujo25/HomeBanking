@@ -59,7 +59,7 @@
                 <select name="loanPayments" v-model="loanPayments" id="">
                     <option :value=payment v-for="payment in payments">{{payment}}</option>
                 </select>
-
+                
                 <h6>Loan's Amount:</h6>
                 <input type="number" name="loanAmount" v-model="loanAmount" id="">
 
@@ -71,7 +71,7 @@
 
                 <p>Loan's Amount with taxes included: {{loanAmount*1.2}}</p>
 
-                <p>Each payment amount: {{(loanAmount*1.2)/loanPayments}}</p>
+                <p>Each payment amount: {{(loanAmount*1.2) / loanPayments}}</p>
 
                 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Apply for this loan</button>

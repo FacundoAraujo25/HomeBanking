@@ -38,7 +38,7 @@ Vue.createApp({
         .then(function (response) {
           console.log("Card created!!!");
 
-          window.location.href = "/web/cards.html";
+          window.location.href = "http://localhost:8585/web/cards.html";
         })
         .catch(function (error) {
           console.log(error);
