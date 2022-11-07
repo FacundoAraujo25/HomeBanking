@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Your code to run since DOM is loaded and ready
     });
 
-Vue.createApp({
+const app = Vue.createApp({
 
     data() {
         return {
@@ -61,6 +61,7 @@ Vue.createApp({
         axios.get('/api/clients')
             .then(datos => {
                 this.clientes = datos.data
+
             })
 
         axios.get('/api/clients/current')
@@ -140,11 +141,9 @@ Vue.createApp({
                 },
                 
                 signOutClient(){
-                    console.log("Que ande o me mato")
                     axios.post('/api/logout')
-                        .then(response => console.log("Que ande o me mato"))
-                    window.location.href = "/web/index.html"
-                },
+                        .then(response => window.location.href = "/web/index.html"
+                        )},
 
                 createAccount(){
                     axios.post("/api/clients/current/accounts")

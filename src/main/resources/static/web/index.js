@@ -41,10 +41,9 @@ Vue.createApp({
         //{headers:{'content-type':'application/x-www-form-urlencoded'}})
         //.then(response => console.log('signed in!!!'))
         signInClient(){
-            axios.post('/api/login',
-            `mail=${this.clientMail}&password=${this.clientPassword}`,
-                {headers:{'content-type':'application/x-www-form-urlencoded'}
-                })
+            fetch('/api/login',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'}},
+            `mail=${this.clientMail}&password=${this.clientPassword}`)
+            .then(response => response.json())
             .then(function(response){
 
                 console.log('signed in!!!')
